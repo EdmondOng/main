@@ -57,6 +57,9 @@ public class CommandTestUtil {
     public static final String PREAMBLE_WHITESPACE = "\t  \r  \n";
     public static final String PREAMBLE_NON_EMPTY = "NonEmptyPreamble";
 
+    public static final String VALID_REMARK_AMY = "hello world";
+    public static final String VALID_REMARK_BOB = "okie doike";
+
     public static final EditCommand.EditPersonDescriptor DESC_AMY;
     public static final EditCommand.EditPersonDescriptor DESC_BOB;
 
