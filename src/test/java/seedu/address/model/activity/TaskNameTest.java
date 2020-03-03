@@ -1,19 +1,19 @@
 package seedu.address.model.activity;
 
 import org.junit.jupiter.api.Test;
-import seedu.address.model.person.Address;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.address.testutil.Assert.assertThrows;
 
 class TaskNameTest {
 
     @Test
     public void isValidTaskName() {
-        // null address
+        // null TaskName
         assertThrows(NullPointerException.class, () -> TaskName.isValidTask(null));
 
-        // invalid addresses
+        // invalid TaskName
         assertFalse(TaskName.isValidTask("")); // empty string
         assertFalse(TaskName.isValidTask(" ")); // spaces only
         assertFalse(TaskName.isValidTask("  ")); // tab only
@@ -24,4 +24,5 @@ class TaskNameTest {
         assertTrue(TaskName.isValidTask("CS2106")); // one character
         assertTrue(TaskName.isValidTask("Programming")); // long address
     }
+
 }
