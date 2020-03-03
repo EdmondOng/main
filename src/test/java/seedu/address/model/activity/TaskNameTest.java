@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 class TaskNameTest {
 
     @Test
-    public void isValidTaskName() {
+    public void isValidTask() {
         // null TaskName
         assertThrows(NullPointerException.class, () -> TaskName.isValidTask(null));
 
