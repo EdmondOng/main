@@ -17,12 +17,10 @@ class TaskNameTest {
         assertFalse(TaskName.isValidTask("")); // empty string
         assertFalse(TaskName.isValidTask(" ")); // spaces only
         assertFalse(TaskName.isValidTask("  ")); // tab only
-        assertFalse(TaskName.isValidTask(" CS2103T")); // whitespace at the start
-        assertFalse(TaskName.isValidTask(" CS2103T  ")); // whitespaces in between
-        assertFalse(TaskName.isValidTask("CS2103T CS2106")); // string with gaps
-        assertTrue(TaskName.isValidTask("CS2103T"));
-        assertTrue(TaskName.isValidTask("CS2106")); // one character
-        assertTrue(TaskName.isValidTask("Programming")); // long address
+        assertFalse(TaskName.isValidTask(" Group meetings at i3")); // whitespace at the start
+        assertFalse(TaskName.isValidTask("Do  cs2106  homework  ")); // more than 1 whitespaces in between
+        assertTrue(TaskName.isValidTask("Basketball")); // string without gaps
+        assertTrue(TaskName.isValidTask("Meeting with project")); //string with gaps
     }
 
 }
