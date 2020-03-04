@@ -12,24 +12,25 @@ public class TaskName {
 
     /*
      * The first character of the task must not be a whitespace,
+     * in between words cannot have more than one whitespace
      * otherwise " " (a blank string) becomes a valid input.
      */
-    public static final String VALIDATION_REGEX = "^\\S+$";
+    public static final String VALIDATION_REGEX = "^[^\\s]*(\\w+\\s)*\\w+\\s*$";
 
-    public final String code;
+    public final String task;
 
     /**
      * Constructs an {@code TaskName}.
      *
-     * @param code A valid code name.
+     * @param task A valid task name.
      */
-    public TaskName(String code) {
-        requireNonNull(code);
-        this.code = code;
+    public TaskName(String task) {
+        requireNonNull(task);
+        this.task = task;
     }
 
     /**
-     * Returns true if a given string is a valid task name.
+     * Returns true if a given string is a valid task.
      */
     public static boolean isValidTask(String test) {
         return test.matches(VALIDATION_REGEX);
@@ -37,19 +38,19 @@ public class TaskName {
 
     @Override
     public String toString() {
-        return code;
+        return task;
     }
 
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object
                 || (other instanceof TaskName // instanceof handles nulls
-                && code.equals(((TaskName) other).code)); // state check
+                && task.equals(((TaskName) other).task)); // state check
     }
 
     @Override
     public int hashCode() {
-        return code.hashCode();
+        return task.hashCode();
     }
 
 }
