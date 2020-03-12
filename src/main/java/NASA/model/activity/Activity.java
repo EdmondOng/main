@@ -12,12 +12,10 @@ import static java.util.Objects.requireNonNull;
 public abstract class Activity implements Regenerable<Activity> {
 
     private Name name;
-
     private Date date;
-
     private Note note;
-
     private Status status;
+    private Priority priority;
 
     /**
      * Constructs a {@code activity}
@@ -34,6 +32,7 @@ public abstract class Activity implements Regenerable<Activity> {
         this.date = date;
         this.note = note;
         this.status = Status.ONGOING;
+        this.priority = new Priority("1");
     }
 
     public Activity(Name name, Note note) {
@@ -44,9 +43,16 @@ public abstract class Activity implements Regenerable<Activity> {
         this.note = note;
         this.date = Date.now();
         this.status = Status.ONGOING;
+        this.priority = new Priority("1");
     }
 
-    //Priority priority;
+    public Activity(Name name, Date date, Note note, Status status, Priority priority) {
+        this.name = name;
+        this.date = date;
+        this.note = note;
+        this.status = Status.ONGOING;
+        this.priority = priority;
+    }
 
     /**
      * Retrieve the name of the activity.
@@ -164,7 +170,6 @@ public abstract class Activity implements Regenerable<Activity> {
         return status == Status.DONE;
     }
 
-    /*
     public Priority getPriority() {
         return priority;
     }
@@ -172,7 +177,6 @@ public abstract class Activity implements Regenerable<Activity> {
     public void setPriority(Priority priority) {
         this.priority = priority;
     }
-     */
 
     /**
      * Regenerate activity based on set rules and logic.
