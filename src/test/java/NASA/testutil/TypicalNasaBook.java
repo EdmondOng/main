@@ -1,6 +1,6 @@
-package NASA.testutil;
+package nasa.testutil;
 
-import NASA.model.NasaBook;
+import nasa.model.NasaBook;
 
 public class TypicalNasaBook {
     public static final NasaBook NASABOOK_TYPE_1 = new NasaBookBuilder().build();

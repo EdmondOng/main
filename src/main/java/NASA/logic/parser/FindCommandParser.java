@@ -1,10 +1,7 @@
-package NASA.logic.parser;
+package nasa.logic.parser;
 
-import NASA.logic.commands.FindCommand;
-import NASA.logic.parser.exceptions.ParseException;
-import seedu.address.model.person.NameContainsKeywordsPredicate;
-
-import java.util.Arrays;
+import nasa.logic.commands.FindCommand;
+import nasa.logic.parser.exceptions.ParseException;
 
 import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 

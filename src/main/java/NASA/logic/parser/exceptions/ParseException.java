@@ -1,6 +1,6 @@
-package NASA.logic.parser.exceptions;
+package nasa.logic.parser.exceptions;
 
-import NASA.commons.exceptions.IllegalValueException;
+import nasa.commons.exceptions.IllegalValueException;
 
 /**
  * Represents a parse error encountered by a parser.

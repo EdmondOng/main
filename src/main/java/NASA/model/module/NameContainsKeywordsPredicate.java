@@ -1,6 +1,6 @@
-package NASA.model.module;
+package nasa.model.module;
 
-import NASA.commons.util.StringUtil;
+import nasa.commons.util.StringUtil;
 
 import java.util.List;
 import java.util.function.Predicate;

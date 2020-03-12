@@ -1,10 +1,10 @@
-package NASA.model.activity;
+package nasa.model.activity;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static NASA.testutil.TypicalActivities.CORRECT_EVENT;
-import static NASA.testutil.TypicalActivities.DEADLINE;
+import static nasa.testutil.TypicalActivities.CORRECT_EVENT;
+import static nasa.testutil.TypicalActivities.DEADLINE;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,13 +1,12 @@
-package NASA.model.module;
+package nasa.model.module;
 
 import java.util.Iterator;
 import java.util.List;
-import java.util.Objects;
 import java.util.function.Predicate;
 
-import NASA.commons.core.index.Index;
-import NASA.model.activity.Activity;
-import NASA.model.activity.UniqueActivityList;
+import nasa.commons.core.index.Index;
+import nasa.model.activity.Activity;
+import nasa.model.activity.UniqueActivityList;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 

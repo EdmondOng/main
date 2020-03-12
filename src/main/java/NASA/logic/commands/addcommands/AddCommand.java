@@ -1,13 +1,13 @@
-package NASA.logic.commands.addcommands;
+package nasa.logic.commands.addcommands;
 
 import static java.util.Objects.requireNonNull;
 
-import NASA.logic.commands.Command;
-import NASA.logic.commands.CommandResult;
-import NASA.logic.commands.exceptions.CommandException;
-import NASA.model.Model;
-import NASA.model.activity.Activity;
-import NASA.model.module.ModuleCode;
+import nasa.logic.commands.Command;
+import nasa.logic.commands.CommandResult;
+import nasa.logic.commands.exceptions.CommandException;
+import nasa.model.Model;
+import nasa.model.activity.Activity;
+import nasa.model.module.ModuleCode;
 
 public class AddCommand extends Command {
 

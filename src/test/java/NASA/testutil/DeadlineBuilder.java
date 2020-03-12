@@ -1,6 +1,6 @@
-package NASA.testutil;
+package nasa.testutil;
 
-import NASA.model.activity.*;
+import nasa.model.activity.*;
 
 public class DeadlineBuilder {
     public static final String DEFAULT_NAME = "Homework";

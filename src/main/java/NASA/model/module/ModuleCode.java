@@ -1,7 +1,7 @@
-package NASA.model.module;
+package nasa.model.module;
 
 import static java.util.Objects.requireNonNull;
-import static NASA.commons.util.AppUtil.checkArgument;
+import static nasa.commons.util.AppUtil.checkArgument;
 
 /**
  * Represents module code of a Module.

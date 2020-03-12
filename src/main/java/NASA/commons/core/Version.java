@@ -1,4 +1,4 @@
-package NASA.commons.core;
+package nasa.commons.core;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

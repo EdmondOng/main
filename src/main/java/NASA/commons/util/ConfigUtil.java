@@ -1,11 +1,11 @@
-package NASA.commons.util;
+package nasa.commons.util;
 
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Optional;
 
-import NASA.commons.core.Config;
-import NASA.commons.exceptions.DataConversionException;
+import nasa.commons.core.Config;
+import nasa.commons.exceptions.DataConversionException;
 
 /**
  * A class for accessing the Config File.

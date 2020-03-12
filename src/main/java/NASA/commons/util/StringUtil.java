@@ -1,7 +1,7 @@
-package NASA.commons.util;
+package nasa.commons.util;
 
 import static java.util.Objects.requireNonNull;
-import static NASA.commons.util.AppUtil.checkArgument;
+import static nasa.commons.util.AppUtil.checkArgument;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

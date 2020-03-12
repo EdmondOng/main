@@ -1,6 +1,6 @@
-package NASA.testutil;
+package nasa.testutil;
 
-import NASA.model.module.Module;
+import nasa.model.module.Module;
 
 /**
  * Contains examples of modules use for testing

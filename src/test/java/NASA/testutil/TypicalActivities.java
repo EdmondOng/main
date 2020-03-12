@@ -1,6 +1,6 @@
-package NASA.testutil;
+package nasa.testutil;
 
-import NASA.model.activity.Activity;
+import nasa.model.activity.Activity;
 
 /**
  * Contains examples of activities use for testing.

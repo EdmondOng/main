@@ -1,4 +1,4 @@
-package NASA.commons.util;
+package nasa.commons.util;
 
 import static java.util.Objects.requireNonNull;
 

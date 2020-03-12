@@ -1,16 +1,12 @@
-package NASA.logic.parser;
+package nasa.logic.parser;
 
 import static java.util.Objects.requireNonNull;
 
-import NASA.logic.commands.DeleteActivityCommand;
-import NASA.commons.core.index.Index;
-import NASA.logic.commands.DeleteActivityCommand;
-import NASA.logic.parser.ParserUtil;
-import NASA.logic.parser.exceptions.ParseException;
-import NASA.model.module.ModuleCode;
+import nasa.logic.commands.DeleteActivityCommand;
+import nasa.commons.core.index.Index;
+import nasa.logic.parser.exceptions.ParseException;
+import nasa.model.module.ModuleCode;
 import seedu.address.logic.commands.EditCommand;
-
-import static NASA.logic.parser.CliSyntax.PREFIX_MODULE;
 
 import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 
@@ -23,7 +19,7 @@ public class DeleteActivityCommandParser implements Parser<DeleteActivityCommand
     public DeleteActivityCommand parse(String args) throws ParseException {
         requireNonNull(args);
         ArgumentMultimap argMultimap =
-                ArgumentTokenizer.tokenize(args, PREFIX_MODULE);
+                ArgumentTokenizer.tokenize(args, CliSyntax.PREFIX_MODULE);
 
         Index index;
         try {
@@ -32,7 +28,7 @@ public class DeleteActivityCommandParser implements Parser<DeleteActivityCommand
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, EditCommand.MESSAGE_USAGE), pe);
         }
 
-        ModuleCode moduleCode = ParserUtil.parseModuleCode(argMultimap.getValue(PREFIX_MODULE).get());
+        ModuleCode moduleCode = ParserUtil.parseModuleCode(argMultimap.getValue(CliSyntax.PREFIX_MODULE).get());
         return new DeleteActivityCommand(index, moduleCode);
     }
 }

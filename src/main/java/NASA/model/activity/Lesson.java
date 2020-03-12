@@ -1,6 +1,4 @@
-package NASA.model.activity;
-
-import java.time.LocalDateTime;
+package nasa.model.activity;
 
 /**
  * Represents Lesson method in Nasa book. New lesson re-instantiates itself after the current lesson's status is DONE.

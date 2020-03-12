@@ -1,6 +1,6 @@
-package NASA.testutil;
+package nasa.testutil;
 
-import NASA.commons.core.index.Index;
+import nasa.commons.core.index.Index;
 
 /**
  * A utility class containing a list of {@code Index} objects to be used in tests.

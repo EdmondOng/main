@@ -1,9 +1,9 @@
-package NASA.logic.parser.addcommandparser;
+package nasa.logic.parser.addcommandparser;
 
-import NASA.logic.commands.addcommands.AddCommand;
-import NASA.logic.parser.ArgumentMultimap;
-import NASA.logic.parser.Parser;
-import NASA.logic.parser.Prefix;
+import nasa.logic.commands.addcommands.AddCommand;
+import nasa.logic.parser.ArgumentMultimap;
+import nasa.logic.parser.Parser;
+import nasa.logic.parser.Prefix;
 
 import java.util.stream.Stream;
 

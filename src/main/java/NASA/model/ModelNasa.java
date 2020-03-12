@@ -1,14 +1,13 @@
-package NASA.model;
+package nasa.model;
 
 import java.nio.file.Path;
-import java.util.Objects;
 import java.util.function.Predicate;
 
-import NASA.commons.core.index.Index;
+import nasa.commons.core.index.Index;
 import javafx.collections.ObservableList;
-import NASA.commons.core.GuiSettings;
-import NASA.model.module.Module;
-import NASA.model.activity.Activity;
+import nasa.commons.core.GuiSettings;
+import nasa.model.module.Module;
+import nasa.model.activity.Activity;
 
 /**
  * The API of the Model component.

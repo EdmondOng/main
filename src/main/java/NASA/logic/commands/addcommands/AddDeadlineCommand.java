@@ -1,13 +1,8 @@
-package NASA.logic.commands.addcommands;
+package nasa.logic.commands.addcommands;
 
-import static NASA.logic.parser.CliSyntax.PREFIX_MODULE;
-import static NASA.logic.parser.CliSyntax.PREFIX_DATE;
-import static NASA.logic.parser.CliSyntax.PREFIX_ACTIVITY_NAME;
-import static NASA.logic.parser.CliSyntax.PREFIX_PRIORITY;
-import static NASA.logic.parser.CliSyntax.PREFIX_NOTE;
-
-import NASA.model.activity.Deadline;
-import NASA.model.module.ModuleCode;
+import nasa.model.activity.Deadline;
+import nasa.model.module.ModuleCode;
+import nasa.logic.parser.CliSyntax;
 
 public class AddDeadlineCommand extends AddCommand {
 
@@ -15,17 +10,17 @@ public class AddDeadlineCommand extends AddCommand {
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds a deadline to the module's activity list. "
             + "Parameters:"
-            + PREFIX_MODULE + "MODULE CODE"
-            + PREFIX_DATE + "DATE"
-            + PREFIX_ACTIVITY_NAME + "ACTIVITY NAME"
-            + PREFIX_PRIORITY + "PRIORITY"
-            + PREFIX_NOTE + "NOTE" + "\n"
+            + CliSyntax.PREFIX_MODULE + "MODULE CODE"
+            + CliSyntax.PREFIX_DATE + "DATE"
+            + CliSyntax.PREFIX_ACTIVITY_NAME + "ACTIVITY NAME"
+            + CliSyntax.PREFIX_PRIORITY + "PRIORITY"
+            + CliSyntax.PREFIX_NOTE + "NOTE" + "\n"
             + "Example: " + COMMAND_WORD + " "
-            + PREFIX_MODULE + "CS3233"
-            + PREFIX_DATE + "2020-03-20"
-            + PREFIX_ACTIVITY_NAME + "SEA Group Programming Assignment"
-            + PREFIX_PRIORITY + "1"
-            + PREFIX_NOTE + "Focus on computational geometry and DP.";
+            + CliSyntax.PREFIX_MODULE + "CS3233"
+            + CliSyntax.PREFIX_DATE + "2020-03-20"
+            + CliSyntax.PREFIX_ACTIVITY_NAME + "SEA Group Programming Assignment"
+            + CliSyntax.PREFIX_PRIORITY + "1"
+            + CliSyntax.PREFIX_NOTE + "Focus on computational geometry and DP.";
 
     public AddDeadlineCommand(Deadline deadline, ModuleCode moduleCode) {
        super(deadline, moduleCode);

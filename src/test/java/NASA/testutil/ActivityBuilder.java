@@ -1,12 +1,12 @@
-package NASA.testutil;
+package nasa.testutil;
 
-import NASA.model.activity.Activity;
-import NASA.model.activity.Date;
-import NASA.model.activity.Deadline;
-import NASA.model.activity.Event;
-import NASA.model.activity.Lesson;
-import NASA.model.activity.Name;
-import NASA.model.activity.Note;
+import nasa.model.activity.Activity;
+import nasa.model.activity.Date;
+import nasa.model.activity.Deadline;
+import nasa.model.activity.Event;
+import nasa.model.activity.Lesson;
+import nasa.model.activity.Name;
+import nasa.model.activity.Note;
 
 /**
  * A utility class to help with building Activity objects.

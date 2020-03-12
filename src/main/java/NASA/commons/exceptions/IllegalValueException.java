@@ -1,4 +1,4 @@
-package NASA.commons.exceptions;
+package nasa.commons.exceptions;
 
 /**
  * Signals that some given data does not fulfill some constraints.

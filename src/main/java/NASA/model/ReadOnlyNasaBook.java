@@ -1,7 +1,7 @@
-package NASA.model;
+package nasa.model;
 
 import javafx.collections.ObservableList;
-import NASA.model.module.Module;
+import nasa.model.module.Module;
 
 /**
  * Unmodifiable view of an Nasa book

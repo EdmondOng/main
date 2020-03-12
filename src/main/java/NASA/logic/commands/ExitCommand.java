@@ -1,6 +1,6 @@
-package NASA.logic.commands;
+package nasa.logic.commands;
 
-import NASA.model.Model;
+import nasa.model.Model;
 
 /**
  * Terminates the program.

@@ -1,4 +1,4 @@
-package NASA.model;
+package nasa.model;
 
 import static java.util.Objects.requireNonNull;
 
@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Objects;
 
-import NASA.commons.core.GuiSettings;
+import nasa.commons.core.GuiSettings;
 
 /**
  * Represents User's preferences.

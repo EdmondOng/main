@@ -1,4 +1,4 @@
-package NASA.logic.parser;
+package nasa.logic.parser;
 
 import java.util.ArrayList;
 import java.util.Arrays;

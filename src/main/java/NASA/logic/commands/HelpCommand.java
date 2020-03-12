@@ -1,6 +1,6 @@
-package NASA.logic.commands;
+package nasa.logic.commands;
 
-import NASA.model.Model;
+import nasa.model.Model;
 
 /**
  * Format full help instructions for every command for display.

@@ -1,6 +1,6 @@
-package NASA.model.activity;
+package nasa.model.activity;
 
-import NASA.model.Regenerable;
+import nasa.model.Regenerable;
 
 import java.time.LocalDateTime;
 

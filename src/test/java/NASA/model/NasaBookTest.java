@@ -1,15 +1,14 @@
-package NASA.model;
+package nasa.model;
 
-import NASA.commons.core.index.Index;
-import NASA.model.module.UniqueModuleList;
+import nasa.commons.core.index.Index;
+import nasa.model.module.UniqueModuleList;
 import org.junit.jupiter.api.Test;
 
-import static NASA.testutil.TypicalActivities.DEADLINE;
+import static nasa.testutil.TypicalActivities.DEADLINE;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static NASA.testutil.TypicalModules.CS2103T;
-import static NASA.testutil.TypicalModules.CS2106;
-import static NASA.testutil.TypicalModules.GEH1001;
+import static nasa.testutil.TypicalModules.CS2103T;
+import static nasa.testutil.TypicalModules.CS2106;
 
 class NasaBookTest {
     private final NasaBook nasaBook = new NasaBook();

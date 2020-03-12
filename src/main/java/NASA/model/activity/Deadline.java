@@ -1,6 +1,4 @@
-package NASA.model.activity;
-
-import java.time.LocalDate;
+package nasa.model.activity;
 
 /**
  * Represents Deadlines method in Nasa Book.

@@ -1,4 +1,4 @@
-package NASA.commons.util;
+package nasa.commons.util;
 
 import static java.util.Objects.requireNonNull;
 
@@ -20,8 +20,8 @@ import com.fasterxml.jackson.databind.deser.std.FromStringDeserializer;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
-import NASA.commons.core.LogsCenter;
-import NASA.commons.exceptions.DataConversionException;
+import nasa.commons.core.LogsCenter;
+import nasa.commons.exceptions.DataConversionException;
 
 /**
  * Converts a Java object instance to JSON and vice versa

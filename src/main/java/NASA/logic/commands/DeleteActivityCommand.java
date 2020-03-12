@@ -1,14 +1,12 @@
-package NASA.logic.commands;
+package nasa.logic.commands;
 
 import static java.util.Objects.requireNonNull;
-import static NASA.logic.parser.CliSyntax.PREFIX_MODULE;
+import static nasa.logic.parser.CliSyntax.PREFIX_MODULE;
 
-import NASA.commons.core.index.Index;
-import NASA.logic.commands.exceptions.CommandException;
-import NASA.model.Model;
-import NASA.model.module.ModuleCode;
-
-import java.util.ArrayList;
+import nasa.commons.core.index.Index;
+import nasa.logic.commands.exceptions.CommandException;
+import nasa.model.Model;
+import nasa.model.module.ModuleCode;
 
 public class DeleteActivityCommand extends Command {
 

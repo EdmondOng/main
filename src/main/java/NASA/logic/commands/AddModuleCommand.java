@@ -1,12 +1,12 @@
-package NASA.logic.commands;
+package nasa.logic.commands;
 
 import static java.util.Objects.requireNonNull;
-import static NASA.logic.parser.CliSyntax.PREFIX_MODULE;
-import static NASA.logic.parser.CliSyntax.PREFIX_MODULE_NAME;
+import static nasa.logic.parser.CliSyntax.PREFIX_MODULE;
+import static nasa.logic.parser.CliSyntax.PREFIX_MODULE_NAME;
 
-import NASA.logic.commands.exceptions.CommandException;
-import NASA.model.Model;
-import NASA.model.module.Module;
+import nasa.logic.commands.exceptions.CommandException;
+import nasa.model.Model;
+import nasa.model.module.Module;
 
 public class AddModuleCommand extends Command {
 

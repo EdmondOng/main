@@ -1,13 +1,13 @@
-package NASA.logic.commands.addcommands;
+package nasa.logic.commands.addcommands;
 
-import static NASA.logic.parser.CliSyntax.PREFIX_MODULE;
-import static NASA.logic.parser.CliSyntax.PREFIX_DATE;
-import static NASA.logic.parser.CliSyntax.PREFIX_ACTIVITY_NAME;
-import static NASA.logic.parser.CliSyntax.PREFIX_PRIORITY;
-import static NASA.logic.parser.CliSyntax.PREFIX_NOTE;
+import static nasa.logic.parser.CliSyntax.PREFIX_MODULE;
+import static nasa.logic.parser.CliSyntax.PREFIX_DATE;
+import static nasa.logic.parser.CliSyntax.PREFIX_ACTIVITY_NAME;
+import static nasa.logic.parser.CliSyntax.PREFIX_PRIORITY;
+import static nasa.logic.parser.CliSyntax.PREFIX_NOTE;
 
-import NASA.model.activity.Event;
-import NASA.model.module.ModuleCode;
+import nasa.model.activity.Event;
+import nasa.model.module.ModuleCode;
 
 public class AddEventCommand extends AddCommand {
 

@@ -1,4 +1,4 @@
-package NASA;
+package nasa;
 
 import java.io.IOException;
 import java.nio.file.Path;
