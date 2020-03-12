@@ -1,11 +1,11 @@
-package nasa.logic.commands;
+package NASA.logic.commands;
 
 import static java.util.Objects.requireNonNull;
-import static nasa.logic.parser.CliSyntax.PREFIX_MODULE;
+import static NASA.logic.parser.CliSyntax.PREFIX_MODULE;
 
-import nasa.logic.commands.exceptions.CommandException;
-import nasa.model.Model;
-import nasa.model.module.Module;
+import NASA.logic.commands.exceptions.CommandException;
+import NASA.model.Model;
+import NASA.model.module.Module;
 
 import java.util.ArrayList;
 

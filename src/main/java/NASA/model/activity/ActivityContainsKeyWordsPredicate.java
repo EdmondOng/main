@@ -1,6 +1,6 @@
-package nasa.model.activity;
+package NASA.model.activity;
 
-import nasa.commons.util.StringUtil;
+import NASA.commons.util.StringUtil;
 
 import java.util.List;
 import java.util.function.Predicate;

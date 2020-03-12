@@ -1,7 +1,7 @@
-package nasa.logic.commands;
+package NASA.logic.commands;
 
-import nasa.logic.commands.exceptions.CommandException;
-import nasa.model.Model;
+import NASA.logic.commands.exceptions.CommandException;
+import NASA.model.Model;
 
 import static java.util.Objects.requireNonNull;
 

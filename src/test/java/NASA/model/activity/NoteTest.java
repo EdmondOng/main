@@ -1,4 +1,4 @@
-package nasa.model.activity;
+package NASA.model.activity;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;

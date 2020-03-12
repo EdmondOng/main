@@ -1,7 +1,7 @@
-package nasa.logic.parser;
+package NASA.logic.parser;
 
-import nasa.logic.commands.Command;
-import nasa.logic.parser.exceptions.ParseException;
+import NASA.logic.commands.Command;
+import NASA.logic.parser.exceptions.ParseException;
 
 /**
  * Represents a Parser that is able to parse user input into a {@code Command} of type {@code T}.

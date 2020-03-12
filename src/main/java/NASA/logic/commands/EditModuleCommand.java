@@ -1,12 +1,12 @@
-package nasa.logic.commands;
+package NASA.logic.commands;
 
 import static java.util.Objects.requireNonNull;
-import static nasa.logic.parser.CliSyntax.PREFIX_MODULE;
-import static nasa.logic.parser.CliSyntax.PREFIX_MODULE_NAME;
+import static NASA.logic.parser.CliSyntax.PREFIX_MODULE;
+import static NASA.logic.parser.CliSyntax.PREFIX_MODULE_NAME;
 
-import nasa.logic.commands.exceptions.CommandException;
-import nasa.model.Model;
-import nasa.commons.core.index.Index;
+import NASA.logic.commands.exceptions.CommandException;
+import NASA.model.Model;
+import NASA.commons.core.index.Index;
 
 public class EditModuleCommand extends Command {
 

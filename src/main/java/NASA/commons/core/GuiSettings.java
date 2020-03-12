@@ -1,4 +1,4 @@
-package nasa.commons.core;
+package NASA.commons.core;
 
 import java.awt.Point;
 import java.io.Serializable;

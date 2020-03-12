@@ -1,20 +1,20 @@
-package nasa.model.module;
+package NASA.model.module;
 
 import static java.util.Objects.requireNonNull;
-import static nasa.commons.util.CollectionUtil.requireAllNonNull;
+import static NASA.commons.util.CollectionUtil.requireAllNonNull;
 
 import java.util.Iterator;
 import java.util.List;
 
-import nasa.commons.core.index.Index;
-import nasa.model.activity.Activity;
-import nasa.model.activity.UniqueActivityList;
-import nasa.model.module.exceptions.DuplicateModuleException;
-import nasa.model.module.exceptions.ModuleNotFoundException;
+import NASA.commons.core.index.Index;
+import NASA.model.activity.Activity;
+import NASA.model.activity.UniqueActivityList;
+import NASA.model.module.exceptions.DuplicateModuleException;
+import NASA.model.module.exceptions.ModuleNotFoundException;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import nasa.commons.util.CollectionUtil;
+import NASA.commons.util.CollectionUtil;
 
 
 /**

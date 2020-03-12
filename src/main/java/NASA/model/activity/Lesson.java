@@ -1,4 +1,4 @@
-package nasa.model.activity;
+package NASA.model.activity;
 
 /**
  * Represents Lesson method in Nasa book. New lesson re-instantiates itself after the current lesson's status is DONE.

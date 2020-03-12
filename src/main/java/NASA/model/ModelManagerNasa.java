@@ -1,7 +1,7 @@
-package nasa.model;
+package NASA.model;
 
 import static java.util.Objects.requireNonNull;
-import static nasa.commons.util.CollectionUtil.requireAllNonNull;
+import static NASA.commons.util.CollectionUtil.requireAllNonNull;
 
 import java.nio.file.Path;
 import java.util.function.Predicate;
@@ -9,11 +9,11 @@ import java.util.logging.Logger;
 
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
-import nasa.commons.core.GuiSettings;
-import nasa.commons.core.index.Index;
-import nasa.commons.core.LogsCenter;
-import nasa.model.activity.Activity;
-import nasa.model.module.Module;
+import NASA.commons.core.GuiSettings;
+import NASA.commons.core.index.Index;
+import NASA.commons.core.LogsCenter;
+import NASA.model.activity.Activity;
+import NASA.model.module.Module;
 
 /**
  * Represents the in-memory model of the address book data.

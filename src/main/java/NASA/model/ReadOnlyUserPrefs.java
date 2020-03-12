@@ -1,8 +1,8 @@
-package nasa.model;
+package NASA.model;
 
 import java.nio.file.Path;
 
-import nasa.commons.core.GuiSettings;
+import NASA.commons.core.GuiSettings;
 
 /**
  * Unmodifiable view of user prefs.

@@ -1,7 +1,7 @@
-package nasa.model.activity;
+package NASA.model.activity;
 
 import static java.util.Objects.requireNonNull;
-import static nasa.commons.util.AppUtil.checkArgument;
+import static NASA.commons.util.AppUtil.checkArgument;
 
 import java.text.ParseException;
 import java.time.LocalDateTime;

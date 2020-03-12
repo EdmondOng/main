@@ -1,13 +1,13 @@
-package nasa.logic.commands.addcommands;
+package NASA.logic.commands.addcommands;
 
-import static nasa.logic.parser.CliSyntax.PREFIX_MODULE;
-import static nasa.logic.parser.CliSyntax.PREFIX_DATE;
-import static nasa.logic.parser.CliSyntax.PREFIX_ACTIVITY_NAME;
-import static nasa.logic.parser.CliSyntax.PREFIX_PRIORITY;
-import static nasa.logic.parser.CliSyntax.PREFIX_NOTE;
+import static NASA.logic.parser.CliSyntax.PREFIX_MODULE;
+import static NASA.logic.parser.CliSyntax.PREFIX_DATE;
+import static NASA.logic.parser.CliSyntax.PREFIX_ACTIVITY_NAME;
+import static NASA.logic.parser.CliSyntax.PREFIX_PRIORITY;
+import static NASA.logic.parser.CliSyntax.PREFIX_NOTE;
 
-import nasa.model.activity.Lesson;
-import nasa.model.module.ModuleCode;
+import NASA.model.activity.Lesson;
+import NASA.model.module.ModuleCode;
 
 public class AddLessonCommand extends AddCommand {
 

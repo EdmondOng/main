@@ -1,7 +1,7 @@
-package nasa.logic.parser;
+package NASA.logic.parser;
 
-import nasa.logic.commands.FindCommand;
-import nasa.logic.parser.exceptions.ParseException;
+import NASA.logic.commands.FindCommand;
+import NASA.logic.parser.exceptions.ParseException;
 
 import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 

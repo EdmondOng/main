@@ -1,4 +1,4 @@
-package nasa.model.module.exceptions;
+package NASA.model.module.exceptions;
 
 /**
  * Signals that the operation will result in duplicate Module (Module are considered duplicates if

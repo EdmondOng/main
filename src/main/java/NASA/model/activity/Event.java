@@ -1,4 +1,4 @@
-package nasa.model.activity;
+package NASA.model.activity;
 
 import static java.util.Objects.requireNonNull;
 

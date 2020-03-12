@@ -1,13 +1,13 @@
-package nasa.testutil;
+package NASA.testutil;
 
-import static nasa.testutil.TypicalModules.CS2103T;
-import static nasa.testutil.TypicalModules.CS2106;
-import static nasa.testutil.TypicalModules.GEH1001;
+import static NASA.testutil.TypicalModules.CS2103T;
+import static NASA.testutil.TypicalModules.CS2106;
+import static NASA.testutil.TypicalModules.GEH1001;
 
-import nasa.commons.core.index.Index;
-import nasa.model.NasaBook;
-import nasa.model.module.Module;
-import nasa.model.module.UniqueModuleList;
+import NASA.commons.core.index.Index;
+import NASA.model.NasaBook;
+import NASA.model.module.Module;
+import NASA.model.module.UniqueModuleList;
 
 public class NasaBookBuilder {
 

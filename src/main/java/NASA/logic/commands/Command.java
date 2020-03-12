@@ -1,7 +1,7 @@
-package nasa.logic.commands;
+package NASA.logic.commands;
 
-import nasa.logic.commands.exceptions.CommandException;
-import nasa.model.Model;
+import NASA.logic.commands.exceptions.CommandException;
+import NASA.model.Model;
 
 /**
  * Represents a command with hidden internal logic and the ability to be executed.

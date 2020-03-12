@@ -1,16 +1,16 @@
-package nasa.logic.parser;
+package NASA.logic.parser;
 
 import static java.util.Objects.requireNonNull;
 
-import nasa.commons.core.index.Index;
-import nasa.commons.util.StringUtil;
-import nasa.logic.parser.exceptions.ParseException;
-import nasa.model.activity.Date;
-import nasa.model.activity.Name;
-import nasa.model.activity.Note;
-import nasa.model.activity.Priority;
-import nasa.model.module.ModuleCode;
-import nasa.model.module.ModuleName;
+import NASA.commons.core.index.Index;
+import NASA.commons.util.StringUtil;
+import NASA.logic.parser.exceptions.ParseException;
+import NASA.model.activity.Date;
+import NASA.model.activity.Name;
+import NASA.model.activity.Note;
+import NASA.model.activity.Priority;
+import NASA.model.module.ModuleCode;
+import NASA.model.module.ModuleName;
 
 /**
  * Contains utility methods used for parsing strings in the various *Parser classes.

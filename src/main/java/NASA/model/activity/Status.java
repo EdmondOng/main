@@ -1,4 +1,4 @@
-package nasa.model.activity;
+package NASA.model.activity;
 
 /**
  * Represent the current work status for a particular task

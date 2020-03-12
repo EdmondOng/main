@@ -1,4 +1,4 @@
-package nasa;
+package NASA;
 
 import javafx.application.Application;
 

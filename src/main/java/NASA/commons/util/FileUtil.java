@@ -1,4 +1,4 @@
-package nasa.commons.util;
+package NASA.commons.util;
 
 import java.io.IOException;
 import java.nio.file.Files;

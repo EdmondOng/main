@@ -1,11 +1,11 @@
-package nasa.logic.parser;
+package NASA.logic.parser;
 
 import static java.util.Objects.requireNonNull;
 
-import nasa.logic.commands.DeleteActivityCommand;
-import nasa.commons.core.index.Index;
-import nasa.logic.parser.exceptions.ParseException;
-import nasa.model.module.ModuleCode;
+import NASA.logic.commands.DeleteActivityCommand;
+import NASA.commons.core.index.Index;
+import NASA.logic.parser.exceptions.ParseException;
+import NASA.model.module.ModuleCode;
 import seedu.address.logic.commands.EditCommand;
 
 import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;

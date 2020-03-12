@@ -1,4 +1,4 @@
-package nasa.logic.parser;
+package NASA.logic.parser;
 
 /**
  * Contains Command Line Interface (CLI) syntax definitions common to multiple commands

@@ -1,4 +1,4 @@
-package nasa;
+package NASA;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -7,8 +7,8 @@ import java.util.Objects;
 import java.util.logging.Logger;
 
 import javafx.application.Application;
-import nasa.commons.core.LogsCenter;
-import nasa.commons.util.FileUtil;
+import NASA.commons.core.LogsCenter;
+import NASA.commons.util.FileUtil;
 
 /**
  * Represents the parsed command-line parameters given to the application.

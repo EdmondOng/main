@@ -1,4 +1,4 @@
-package nasa.logic.commands;
+package NASA.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 

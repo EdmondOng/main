@@ -1,6 +1,6 @@
-package nasa.testutil;
+package NASA.testutil;
 
-import nasa.model.activity.*;
+import NASA.model.activity.*;
 
 public class EventBuilder {
 

@@ -1,4 +1,4 @@
-package nasa.commons.core;
+package NASA.commons.core;
 
 import java.io.IOException;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package nasa.model.activity;
+package NASA.model.activity;
 
 /**
  * Represents Deadlines method in Nasa Book.

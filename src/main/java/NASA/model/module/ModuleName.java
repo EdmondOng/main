@@ -1,9 +1,9 @@
-package nasa.model.module;
+package NASA.model.module;
 
-import nasa.commons.util.AppUtil;
+import NASA.commons.util.AppUtil;
 
 import static java.util.Objects.requireNonNull;
-import static nasa.commons.util.AppUtil.checkArgument;
+import static NASA.commons.util.AppUtil.checkArgument;
 
 public class ModuleName {
 

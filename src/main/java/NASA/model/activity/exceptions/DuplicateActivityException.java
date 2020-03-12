@@ -1,4 +1,4 @@
-package nasa.model.activity.exceptions;
+package NASA.model.activity.exceptions;
 
 /**
  * Signals that the operation will result in duplicate Activity (Activity are considered duplicates if

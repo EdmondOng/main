@@ -1,8 +1,8 @@
-package nasa.logic.commands.addcommands;
+package NASA.logic.commands.addcommands;
 
-import nasa.model.activity.Deadline;
-import nasa.model.module.ModuleCode;
-import nasa.logic.parser.CliSyntax;
+import NASA.model.activity.Deadline;
+import NASA.model.module.ModuleCode;
+import NASA.logic.parser.CliSyntax;
 
 public class AddDeadlineCommand extends AddCommand {
 

@@ -1,14 +1,14 @@
-package nasa.model.activity;
+package NASA.model.activity;
 
 import static java.util.Objects.requireNonNull;
-import static nasa.commons.util.CollectionUtil.requireAllNonNull;
+import static NASA.commons.util.CollectionUtil.requireAllNonNull;
 
 import java.util.Iterator;
 import java.util.List;
 
-import nasa.commons.core.index.Index;
-import nasa.model.activity.exceptions.ActivityNotFoundException;
-import nasa.model.activity.exceptions.DuplicateActivityException;
+import NASA.commons.core.index.Index;
+import NASA.model.activity.exceptions.ActivityNotFoundException;
+import NASA.model.activity.exceptions.DuplicateActivityException;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

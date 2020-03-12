@@ -1,4 +1,4 @@
-package nasa.commons.exceptions;
+package NASA.commons.exceptions;
 
 /**
  * Represents an error during conversion of data from one format to another

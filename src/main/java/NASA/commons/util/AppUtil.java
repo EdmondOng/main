@@ -1,9 +1,9 @@
-package nasa.commons.util;
+package NASA.commons.util;
 
 import static java.util.Objects.requireNonNull;
 
 import javafx.scene.image.Image;
-import nasa.MainApp;
+import NASA.MainApp;
 
 /**
  * A container for App specific utility functions

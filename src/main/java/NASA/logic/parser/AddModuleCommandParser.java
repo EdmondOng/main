@@ -1,12 +1,12 @@
-package nasa.logic.parser;
+package NASA.logic.parser;
 
-import nasa.logic.commands.AddModuleCommand;
-import nasa.logic.parser.exceptions.ParseException;
+import NASA.logic.commands.AddModuleCommand;
+import NASA.logic.parser.exceptions.ParseException;
 
-import nasa.model.module.Module;
-import nasa.model.module.ModuleName;
-import nasa.model.module.ModuleCode;
-import nasa.commons.core.Messages;
+import NASA.model.module.Module;
+import NASA.model.module.ModuleName;
+import NASA.model.module.ModuleCode;
+import NASA.commons.core.Messages;
 
 import java.util.stream.Stream;
 

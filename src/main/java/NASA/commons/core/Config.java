@@ -1,4 +1,4 @@
-package nasa.commons.core;
+package NASA.commons.core;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;

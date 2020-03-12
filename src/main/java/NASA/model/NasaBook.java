@@ -1,15 +1,15 @@
-package nasa.model;
+package NASA.model;
 
 import static java.util.Objects.requireNonNull;
 
 import java.util.List;
 
-import nasa.commons.core.index.Index;
+import NASA.commons.core.index.Index;
 import javafx.collections.ObservableList;
-import nasa.model.module.Module;
-import nasa.model.activity.Activity;
-import nasa.model.activity.UniqueActivityList;
-import nasa.model.module.UniqueModuleList;
+import NASA.model.module.Module;
+import NASA.model.activity.Activity;
+import NASA.model.activity.UniqueActivityList;
+import NASA.model.module.UniqueModuleList;
 
 /**
  * Wraps all data at the Nasa Book Level

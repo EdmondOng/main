@@ -1,6 +1,6 @@
-package nasa.model.activity;
+package NASA.model.activity;
 
-import static nasa.commons.util.AppUtil.checkArgument;
+import static NASA.commons.util.AppUtil.checkArgument;
 
 /**
  * Represents an activity's priority.

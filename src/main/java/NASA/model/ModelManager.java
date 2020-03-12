@@ -1,4 +1,4 @@
-package nasa.model;
+package NASA.model;
 
 public class ModelManager {
 }

@@ -1,4 +1,4 @@
-package nasa.commons.core;
+package NASA.commons.core;
 
 /**
  * Container for user visible messages.

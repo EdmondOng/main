@@ -1,4 +1,4 @@
-package nasa.commons.core.index;
+package NASA.commons.core.index;
 
 /**
  * Represents a zero-based or one-based index.

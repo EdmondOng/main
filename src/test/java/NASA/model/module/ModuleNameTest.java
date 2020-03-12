@@ -1,4 +1,4 @@
-package nasa.model.module;
+package NASA.model.module;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

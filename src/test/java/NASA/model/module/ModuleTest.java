@@ -1,6 +1,6 @@
-package nasa.model.module;
+package NASA.model.module;
 
-import static nasa.testutil.Assert.assertThrows;
+import static NASA.testutil.Assert.assertThrows;
 
 import org.junit.jupiter.api.Test;
 

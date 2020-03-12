@@ -1,10 +1,10 @@
-package nasa.testutil;
+package NASA.testutil;
 
-import nasa.model.activity.Activity;
-import nasa.model.activity.UniqueActivityList;
-import nasa.model.module.ModuleCode;
-import nasa.model.module.ModuleName;
-import nasa.model.module.Module;
+import NASA.model.activity.Activity;
+import NASA.model.activity.UniqueActivityList;
+import NASA.model.module.ModuleCode;
+import NASA.model.module.ModuleName;
+import NASA.model.module.Module;
 
 public class ModuleBuilder {
 

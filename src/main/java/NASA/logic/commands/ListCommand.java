@@ -1,8 +1,8 @@
-package nasa.logic.commands;
+package NASA.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 
-import nasa.model.Model;
+import NASA.model.Model;
 
 public class ListCommand extends Command {
 
