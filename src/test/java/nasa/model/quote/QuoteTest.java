@@ -15,7 +15,6 @@ class QuoteTest {
     @Test
     void getQuoteTest() {
         Quote.readFile();
-
         assertFalse(Quote.getQuote().isEmpty());
         assertFalse(Quote.getQuote().isEmpty());
         assertFalse(Quote.getQuote().isEmpty());
