@@ -117,6 +117,7 @@ public class NasaBookParser {
 
         case QuoteCommand.COMMAND_WORD:
             return new QuoteCommand();
+
         case SortCommand.COMMAND_WORD:
             return new SortCommandParser().parse(arguments);
 
