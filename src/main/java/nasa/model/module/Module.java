@@ -127,6 +127,11 @@ public class Module {
         activityList.editActivityByIndex(index, args);
     }
 
+    public void setSchedule(Name activityName, Index index) {
+        activityList.setSchedule(activityName, index);
+        updateFilteredActivityList(x -> true);
+    }
+
     public Iterator<Activity> iterator() {
         return activityList.iterator();
     }

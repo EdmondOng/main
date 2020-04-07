@@ -10,7 +10,7 @@ import static nasa.commons.util.CollectionUtil.requireAllNonNull;
  */
 public class Event extends Activity {
     public static final String INVALID_EVENT =
-        "Event provided is invalid!";
+        "Event provided has passed or it is not logical eg. start date > end date.";
 
     private Date startDate;
     private Date endDate;
@@ -99,6 +99,10 @@ public class Event extends Activity {
         return endDate;
     }
 
+    public boolean isOver() {
+        return Date.now().isAfter(endDate);
+    }
+
     /**
      * Checks if the event is valid.
      * @param activity Activity to be checked
@@ -106,7 +110,6 @@ public class Event extends Activity {
      */
     public static boolean isValidEvent(Activity activity) {
         requireNonNull(activity);
-
         if (activity instanceof Event) {
             Event event = (Event) activity;
             boolean hasNotExpired = Date.now().isBefore(event.getDateTo());

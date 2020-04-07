@@ -48,7 +48,7 @@ public class JsonAdaptedHistory {
      * Converts Jackson to adapted history object.
      * @return HistoryBook
      */
-    public HistoryBook<UniqueModuleList> toModelType() throws IllegalValueException {
+    public HistoryBook toModelType() throws IllegalValueException {
         final List<UniqueModuleList> historyList = new ArrayList<>();
         for (List<JsonAdaptedModule> list : moduleList) {
             final UniqueModuleList uniqueList = new UniqueModuleList();
@@ -60,7 +60,7 @@ public class JsonAdaptedHistory {
 
         final ModuleListHistory<UniqueModuleList> temp = new ModuleListHistory<>();
         temp.setStack(historyList);
-        HistoryBook<UniqueModuleList> historyBook = new HistoryBook<>();
+        HistoryBook historyBook = new HistoryBook();
         historyBook.setModuleListHistory(temp);
         return historyBook;
     }

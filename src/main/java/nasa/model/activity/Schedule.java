@@ -20,6 +20,15 @@ public class Schedule {
     private Date defaultDate;
 
     /**
+     * Empty Schedule
+     */
+    public Schedule() {
+        type = 0;
+        date = null;
+        defaultDate = null;
+    }
+
+    /**
      * Construct a schedule from string.
      * @param input String
      */
@@ -50,7 +59,7 @@ public class Schedule {
         this.date = date;
         this.defaultDate = date;
         this.type = type;
-        init(type);
+        init();
     }
 
     /**
@@ -60,7 +69,7 @@ public class Schedule {
     public boolean update() {
         boolean hasUpdate = false;
         while (Date.now().isAfter(date) && type != 0) {
-            init(type);
+            init();
             hasUpdate = true;
         }
         return hasUpdate;
@@ -74,7 +83,16 @@ public class Schedule {
         checkArgument(isValidSchedule(String.valueOf(type)), MESSAGE_CONSTRAINTS);
         this.type = type;
         date = defaultDate;
-        update();
+        init();
+    }
+
+    /**
+     * Set basic parameters.
+     */
+    public void setParam(int type, Date date, Date defaultDate) {
+        this.type = type;
+        this.date = date;
+        this.defaultDate = defaultDate;
     }
 
     /**
@@ -87,10 +105,9 @@ public class Schedule {
 
     /**
      * Initialise schedules.
-     * @param type int
      */
-    public void init(int type) {
-        switch (type) {
+    public void init() {
+        switch (this.type) {
         case 0 :
             cancel();
             break;

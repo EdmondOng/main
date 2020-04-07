@@ -214,6 +214,10 @@ public abstract class Activity implements Regenerable<Activity> {
         this.priority = priority;
     }
 
+    public Date getScheduleDate() {
+        return schedule.getDate();
+    }
+
     public Schedule getSchedule() {
         return schedule;
     }

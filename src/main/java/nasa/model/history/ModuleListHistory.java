@@ -30,5 +30,4 @@ public class ModuleListHistory<T> extends History<T> {
         ObservableList<T> newList = FXCollections.observableArrayList(list);
         return newList;
     }
-
 }

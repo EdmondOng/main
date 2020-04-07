@@ -11,6 +11,7 @@ import javafx.collections.ObservableList;
 
 import nasa.commons.core.index.Index;
 import nasa.model.activity.Activity;
+import nasa.model.activity.Name;
 import nasa.model.activity.UniqueActivityList;
 import nasa.model.module.exceptions.DuplicateModuleException;
 import nasa.model.module.exceptions.ModuleNotFoundException;
@@ -185,6 +186,13 @@ public class UniqueModuleList implements Iterable<Module> {
         moduleSelected.setActivityByIndex(index, activity);
     }
 
+
+    public void setSchedule(ModuleCode moduleCode, Name activity, Index index) {
+        Module moduleSelected = getModule(moduleCode);
+        moduleSelected.setSchedule(activity, index);
+        moduleSelected.updateFilteredActivityList(x -> true);
+    }
+
     /**
      * Edits activity based on index and module.
      * @param module Module of the activity
@@ -241,7 +249,7 @@ public class UniqueModuleList implements Iterable<Module> {
      */
     public Module getModule(ModuleCode moduleCode) {
         requireAllNonNull(moduleCode);
-        return internalList.parallelStream()
+        return internalList.stream()
                 .filter(x -> x.getModuleCode().equals(moduleCode))
                 .findFirst()
                 .orElse(null);

@@ -9,7 +9,7 @@ import static nasa.commons.util.CollectionUtil.requireAllNonNull;
  */
 public class Lesson extends Activity {
     public static final String INVALID_LESSON =
-        "Lesson provided is invalid!";
+        "Lesson has passed! Or End Date is before Start Date. ";
 
     private int numOfDaysTillNextLesson = 7; // Frequency of lesson in number of days (eg. every 7 days) Default is 7.
     private Date startDate;
@@ -89,6 +89,10 @@ public class Lesson extends Activity {
 
     public void setNumOfDaysTillNextLesson(int newNumOfDays) {
         this.numOfDaysTillNextLesson = newNumOfDays;
+    }
+
+    public boolean isOver() {
+        return Date.now().isAfter(endDate);
     }
 
     /**

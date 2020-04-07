@@ -28,7 +28,7 @@ public class ActivityCard extends UiPart<Region> {
      * @see <a href="https://github.com/se-edu/addressbook-level4/issues/336">The issue on AddressBook level 4</a>
      */
 
-    public final Activity activity;
+    private final Activity activity;
     @FXML
     private VBox cardPane;
     @FXML
@@ -49,6 +49,8 @@ public class ActivityCard extends UiPart<Region> {
     private Label labelForCircle;
     @FXML
     private Circle circle;
+    @FXML
+    private Label dateToRepeat;
 
 
 
@@ -60,10 +62,14 @@ public class ActivityCard extends UiPart<Region> {
         note.setText(activity.getNote().toString());
         status.setText(activity.getStatus().toString());
         priority.setText(activity.getPriority().toString());
+        dateToRepeat.setText("-");
         if (activity instanceof Deadline) {
             Deadline deadline = (Deadline) activity;
             labelForCircle.setText("D");
-            dateline.setText(deadline.getDueDate().toString());
+            if (deadline.getSchedule().getType() != 0) {
+                dateToRepeat.setText("Repeat = " + deadline.getScheduleDate().toString());
+            }
+            dateline.setText("Due Date = " + deadline.getDueDate().toString());
             int urgent = deadline.getDifferenceInDate();
             if (urgent > 5) {
                 circle.setFill(Color.GREEN);

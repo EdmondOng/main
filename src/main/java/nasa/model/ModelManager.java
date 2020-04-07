@@ -65,8 +65,9 @@ public class ModelManager implements Model {
      * Startup setup for Nasa book.
      */
     public void initialisation() {
+        updateStatus();
         updateSchedule();
-        //updateHistory();
+        updateHistory();
         //Quote.readFile();
         updateFilteredModuleList(PREDICATE_SHOW_ALL_MODULES);
     }
@@ -86,13 +87,16 @@ public class ModelManager implements Model {
     public void updateSchedule() {
         nasaBook.scheduleAll();
         updateFilteredActivityList(PREDICATE_SHOW_ALL_ACTIVITIES);
-        updateHistory();
+    }
+
+    public void updateStatus() {
+        nasaBook.getModuleList().forEach(x -> x.getActivities().updateStatus());
     }
 
     @Override
     public void undoHistory() {
         if (historyManager.undo()) {
-            nasaBook.setModuleList(historyManager.getItem());
+            nasaBook.setModuleList(historyManager.getItem().getDeepCopyList());
             updateFilteredModuleList(PREDICATE_SHOW_ALL_MODULES);
         }
     }
@@ -101,7 +105,7 @@ public class ModelManager implements Model {
     public boolean redoHistory() {
         boolean hasRedo = historyManager.redo();
         if (hasRedo) {
-            nasaBook.setModuleList(historyManager.getItem());
+            nasaBook.setModuleList(historyManager.getItem().getDeepCopyList());
             updateFilteredModuleList(PREDICATE_SHOW_ALL_MODULES);
         }
         return hasRedo;
@@ -146,6 +150,7 @@ public class ModelManager implements Model {
     @Override
     public void setNasaBook(ReadOnlyNasaBook nasaBook) {
         this.nasaBook.resetData(nasaBook);
+        updateHistory();
     }
 
     @Override
@@ -191,7 +196,6 @@ public class ModelManager implements Model {
     public void addModule(Module module) {
         nasaBook.addModule(module);
         updateHistory();
-        //historyManager.add(new UniqueModuleList().setModules(nasaBook.getList()));
         updateFilteredModuleList(PREDICATE_SHOW_ALL_MODULES);
     }
 
@@ -199,14 +203,12 @@ public class ModelManager implements Model {
     public void addModule(ModuleCode moduleCode, ModuleName moduleName) {
         nasaBook.addModule(moduleCode, moduleName);
         updateHistory();
-        //historyManager.add(new UniqueModuleList().setModules(nasaBook.getList()));
         updateFilteredModuleList(PREDICATE_SHOW_ALL_MODULES);
     }
 
     @Override
     public void setModule(Module target, Module editedModule) {
         requireAllNonNull(target, editedModule);
-
         nasaBook.setModule(target, editedModule);
         updateHistory();
     }
@@ -214,7 +216,6 @@ public class ModelManager implements Model {
     @Override
     public void setModule(ModuleCode target, Module editedModule) {
         requireAllNonNull(target, editedModule);
-
         nasaBook.setModule(target, editedModule);
         updateHistory();
     }
@@ -314,6 +315,7 @@ public class ModelManager implements Model {
         requireAllNonNull(module, activity, type);
         boolean hasExecuted = nasaBook.setSchedule(module, activity, type);
         updateHistory();
+        updateFilteredModuleList(PREDICATE_SHOW_ALL_MODULES);
         return hasExecuted;
     }
 
@@ -371,6 +373,7 @@ public class ModelManager implements Model {
      */
     public void sortActivityList(SortMethod sortMethod) {
         requireNonNull(sortMethod);
+        updateHistory();
         for (Module module : filteredModules) {
             module.sortActivityList(sortMethod);
         }

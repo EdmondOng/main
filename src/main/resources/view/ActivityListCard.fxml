@@ -41,4 +41,9 @@
          <Region fx:constant="USE_PREF_SIZE"/>
       </minWidth>
    </Label>
+   <Label fx:id="dateToRepeat" styleClass="highlight_label" text="\$code" wrapText="true">
+      <minWidth>
+         <Region fx:constant="USE_PREF_SIZE"/>
+      </minWidth>
+   </Label>
 </VBox>

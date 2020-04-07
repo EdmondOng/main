@@ -22,8 +22,11 @@ public class ActivityListPanel extends UiPart<Region> {
     @FXML
     private ListView<Activity> activityListView;
 
+    private ObservableList<Activity> activityList;
+
     public ActivityListPanel(ObservableList<Activity> activityList) {
         super(FXML);
+        this.activityList = activityList;
         activityListView.setItems(activityList);
         activityListView.setCellFactory(listView -> new ActivityListViewCell());
     }
@@ -51,5 +54,4 @@ public class ActivityListPanel extends UiPart<Region> {
             }
         }
     }
-
 }

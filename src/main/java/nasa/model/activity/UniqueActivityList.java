@@ -87,7 +87,7 @@ public class UniqueActivityList implements Iterable<Activity> {
     }
 
     public ObservableList<Activity> getActivityList() {
-        return this.internalList;
+        return asUnmodifiableObservableList();
     }
 
     public Activity getActivityByIndex(Index index) {
@@ -136,6 +136,11 @@ public class UniqueActivityList implements Iterable<Activity> {
         }
 
         internalList.set(index.getZeroBased(), activity);
+    }
+
+    public void setSchedule(Name activity, Index type) {
+        internalList.stream().filter(x -> x.getName().equals(activity))
+                .forEach(x -> x.setSchedule(type.getZeroBased()));
     }
 
     /**
@@ -196,7 +201,9 @@ public class UniqueActivityList implements Iterable<Activity> {
             if (activity instanceof Deadline) {
                 Activity activityTemp = new Deadline(activity.getName(), activity.getDate(), activity.getNote(),
                         activity.getStatus(), activity.getPriority(), ((Deadline) activity).getDueDate());
-                activityTemp.setSchedule(activity.getSchedule());
+                Schedule temp = new Schedule();
+                temp.setParam(activity.getSchedule().getType(), activity.getSchedule().getDate(), activity.getDate());
+                activityTemp.setSchedule(temp);
                 deepCopyList.add(activityTemp);
             }
 
@@ -204,7 +211,9 @@ public class UniqueActivityList implements Iterable<Activity> {
                 Activity activityTemp = new Event(activity.getName(), activity.getDate(), activity.getNote(),
                         activity.getStatus(), activity.getPriority(), (
                                 (Event) activity).getDateFrom(), ((Event) activity).getDateTo());
-                activityTemp.setSchedule(activity.getSchedule());
+                Schedule temp = new Schedule();
+                temp.setParam(activity.getSchedule().getType(), activity.getSchedule().getDate(), activity.getDate());
+                activityTemp.setSchedule(temp);
                 deepCopyList.add(activityTemp);
             }
 
@@ -212,11 +221,47 @@ public class UniqueActivityList implements Iterable<Activity> {
                 Activity activityTemp = new Lesson(activity.getName(), activity.getDate(), activity.getNote(),
                         activity.getStatus(), activity.getPriority(), (
                                 (Lesson) activity).getDateFrom(), ((Lesson) activity).getDateTo());
-                activityTemp.setSchedule(activity.getSchedule());
+                Schedule temp = new Schedule();
+                temp.setParam(activity.getSchedule().getType(), activity.getSchedule().getDate(), activity.getDate());
+                activityTemp.setSchedule(temp);
                 deepCopyList.add(activityTemp);
             }
         }
         return deepCopyList;
+    }
+
+    /**
+     * Refresh each activity current status.
+     */
+    public void updateStatus() {
+        internalList.forEach(Activity::updateStatus);
+    }
+
+    /**
+     * Once activity has passed delete it.
+     */
+    public void deleteOutdatedActivity() {
+        ObservableList<Activity> copyOfList = getDeepCopyList();
+        copyOfList.forEach(x -> {
+            if (x instanceof Deadline) {
+                Deadline deadline = (Deadline) x;
+                if (deadline.getSchedule().getType() == 0 && deadline.isLate()) {
+                    internalList.remove(x);
+                }
+            }
+            if (x instanceof Event) {
+                Event event = (Event) x;
+                if (event.isOver()) {
+                    internalList.remove(x);
+                }
+            }
+            if (x instanceof Lesson) {
+                Lesson lesson = (Lesson) x;
+                if (lesson.isOver()) {
+                    internalList.remove(x);
+                }
+            }
+        });
     }
 
     /**

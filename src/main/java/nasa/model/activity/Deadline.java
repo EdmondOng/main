@@ -96,7 +96,7 @@ public class Deadline extends Activity {
     @Override
     public Deadline regenerate() {
         super.getSchedule().update();
-        if (Date.now().isAfter(dueDate)) {
+        if (Date.now().isAfter(dueDate) && getSchedule().getType() != 0) {
             setDueDate(getSchedule().getDate().addDaysToCurrDate(getDifferenceInDay()));
             super.setDate(super.getSchedule().getDate());
             setStatus(Status.ONGOING);

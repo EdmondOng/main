@@ -28,7 +28,8 @@ public abstract class History<T> {
      */
     public void push(T item) {
         if (this.item != null) {
-            stack.push(this.item);
+            T temp = this.item;
+            stack.push(temp);
         }
         this.item = item;
     }
@@ -70,8 +71,12 @@ public abstract class History<T> {
         return item;
     }
 
+    /**
+     * Clear the entire stack.
+     */
     public void resetItem() {
-        this.item = null;
+        item = null;
+        stack.clear();
     }
 
     public void setStack(List<T> stack) {

@@ -7,6 +7,7 @@ import nasa.logic.commands.CommandResult;
 import nasa.logic.commands.exceptions.CommandException;
 import nasa.model.Model;
 import nasa.model.activity.Activity;
+import nasa.model.activity.Event;
 import nasa.model.module.ModuleCode;
 
 /**
@@ -48,6 +49,10 @@ public class AddCommand extends Command {
 
         if (model.hasActivity(moduleCode, toAdd)) {
             throw new CommandException(MESSAGE_DUPLICATED_ACTIVITY);
+        }
+
+        if (toAdd instanceof Event) {
+            Event.isValidEvent(toAdd);
         }
 
         model.addActivity(moduleCode, toAdd);

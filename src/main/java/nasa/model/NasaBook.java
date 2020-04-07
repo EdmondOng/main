@@ -379,16 +379,18 @@ public class NasaBook implements ReadOnlyNasaBook {
      * Reschedule all activity based on user presets.
      */
     public void scheduleAll() {
-        moduleList.asModifiableObservableList().stream()
-                .forEach(x -> x.getActivities().getActivityList().stream()
-                        .forEach(y -> y.regenerate()));
+        moduleList.asModifiableObservableList()
+                .forEach(x -> x.getActivities().getActivityList()
+                        .forEach(Activity::regenerate));
+        moduleList.asModifiableObservableList()
+                .forEach(x -> x.getActivities().deleteOutdatedActivity());
     }
 
     public boolean setSchedule(ModuleCode module, Name activity, Index type) {
         if (hasModule(module)) {
             Module item = moduleList.getModule(module);
             if (item.hasActivity(activity)) {
-                moduleList.getModule(module).getActivityByName(activity).setSchedule(type.getZeroBased());
+                moduleList.setSchedule(module, activity, type);
                 return true;
             }
         }
@@ -430,7 +432,7 @@ public class NasaBook implements ReadOnlyNasaBook {
         ObservableList<Module> deepCopyList = FXCollections.observableArrayList();
         for (Module mods : moduleList.asUnmodifiableObservableList()) {
             Module moduleTemp = new Module(mods.getModuleCode(), mods.getModuleName());
-            moduleTemp.setActivities(mods.getActivities());
+            moduleTemp.setActivities(mods.getDeepCopyList());
             deepCopyList.add(moduleTemp);
         }
         return deepCopyList;
