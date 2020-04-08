@@ -229,6 +229,10 @@ public class MainWindow extends UiPart<Stage> {
                 tabPanel.getStatistics();
             }
 
+            if (commandResult.isQuote()) {
+                getQuote(commandResult.getFeedbackToUser());
+            }
+
             return commandResult;
         } catch (CommandException | ParseException e) {
             logger.info("Invalid command: " + commandText);

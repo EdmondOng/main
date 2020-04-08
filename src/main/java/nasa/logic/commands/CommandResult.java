@@ -21,6 +21,11 @@ public class CommandResult {
     private final boolean statistics;
 
     /**
+     * The application should show quote.
+     */
+    private boolean quote;
+
+    /**
      * Constructs a {@code CommandResult} with the specified fields.
      * @param feedbackToUser String
      * @param showHelp boolean
@@ -31,6 +36,7 @@ public class CommandResult {
         this.showHelp = showHelp;
         this.exit = exit;
         this.statistics = statistics;
+        this.quote = false;
     }
 
     /**
@@ -40,6 +46,13 @@ public class CommandResult {
      */
     public CommandResult(String feedbackToUser) {
         this(feedbackToUser, false, false, false);
+    }
+
+    /**
+     * Make quote property true.
+     */
+    public void setQuote() {
+        this.quote = true;
     }
 
     public String getFeedbackToUser() {
@@ -56,6 +69,10 @@ public class CommandResult {
 
     public boolean isStatistics() {
         return statistics;
+    }
+
+    public boolean isQuote() {
+        return quote;
     }
 
     @Override
