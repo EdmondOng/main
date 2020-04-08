@@ -35,7 +35,7 @@
             <Region fx:constant="USE_PREF_SIZE" />
         </minWidth>
     </Label>
-   <Label fx:id="dateToRepeat" text="\$code" GridPane.rowIndex="2" />
+   <Label fx:id="dateToRepeat" styleClass="activity_small_label" text="\$code" GridPane.rowIndex="2" />
    <Circle fx:id="circle" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" translateX="44.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
     <padding>
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

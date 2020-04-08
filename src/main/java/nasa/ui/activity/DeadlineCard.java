@@ -58,7 +58,7 @@ public class DeadlineCard extends UiPart<Region> {
         priority.setText(activity.getPriority().toString());
         dateToRepeat.setText("-");
         if (activity.getSchedule().getType() != 0) {
-            dateToRepeat.setText("Repeat = " + activity.getScheduleDate().toString());
+            dateToRepeat.setText("Repeat: " + activity.getScheduleDate().toString());
         }
         int urgent = activity.getDifferenceInDate();
         if (urgent > 5) {
