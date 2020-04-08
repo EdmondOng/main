@@ -527,9 +527,9 @@
 }
 
 .highlight_label {
-    -fx-background-color: transparent;
+    -fx-background-color: white;
     -fx-text-fill: black;
-    -fx-font-size: 11;
+    -fx-font-size: 20;
     -fx-border-radius: 4;
     -fx-background-radius: 4;
     -fx-border-style: solid;

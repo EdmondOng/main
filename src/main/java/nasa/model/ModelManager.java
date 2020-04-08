@@ -68,7 +68,7 @@ public class ModelManager implements Model {
         updateStatus();
         updateSchedule();
         updateHistory();
-        //Quote.readFile();
+        Quote.readFile();
         updateFilteredModuleList(PREDICATE_SHOW_ALL_MODULES);
     }
 
