@@ -28,6 +28,8 @@ public class QuotePanel extends UiPart<Region> {
     public QuotePanel(String input) {
         super(FXML);
         label.setText(input);
+        label.setMaxWidth(500);
+        label.setWrapText(true);
     }
 
     /**
